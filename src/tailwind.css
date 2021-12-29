@@ -1,9 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply text-2xl
+    h1, h2, h3, h4 {
+        font-family: 'Big Shoulders Display', cursive;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+}
+
+@layer components {
+    .btn:hover > span {
+        @apply bg-gold;
+    }
+
+    .btn:hover > div {
+        @apply bg-black;
+    }
+
+    #social-gold > a:hover path {
+        @apply fill-white
+    }
+
+    #social-black > a:hover path {
+        @apply fill-gold
     }
 }
